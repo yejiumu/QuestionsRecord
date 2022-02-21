@@ -1,8 +1,10 @@
 package LeetCode;
 
-
 import java.util.Arrays;
 
+/**
+ * 学生分数的最小差值
+ */
 public class _1984_minimumDifference {
     /**
      * 执行用时：4 ms, 在所有 Java 提交中击败了99.98%的用户

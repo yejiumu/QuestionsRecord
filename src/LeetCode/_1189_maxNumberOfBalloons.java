@@ -2,6 +2,9 @@ package LeetCode;
 
 import java.util.Arrays;
 
+/**
+ * “气球” 的最大数量
+ */
 public class _1189_maxNumberOfBalloons {
     public static void main(String[] args) {
         System.out.println(maxNumberOfBalloons("loonbalxballpoon"));
