@@ -1,5 +1,7 @@
 package LeetCode;
 
+import org.junit.Test;
+
 /**
  * 转换成小写字母
  */
@@ -13,21 +15,19 @@ public class _709_toLowerCase {
 //    }
 
     /**
-     * 不用函数
-     * 执行用时：6 ms, 在所有 Java 提交中击败了5.37%的用户
-     * 内存消耗：38.4 MB, 在所有 Java 提交中击败了5.08%的用户
-     * <p>
-     * 说实话有点慢
+     * 执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户
+     * 内存消耗：39.4 MB, 在所有 Java 提交中击败了5.01%的用户
      */
     public String toLowerCase(String s) {
-        String str = "";
+        StringBuilder str = new StringBuilder();
+        char ch;
         for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) <= 'Z' && s.charAt(i) >= 'A') {
-                str = str + (char) (s.charAt(i) + 32);
-                continue;
+            ch = s.charAt(i);
+            if (ch >= 65 && ch <= 90) {
+                ch += 32;
             }
-            str = str + s.charAt(i);
+            str.append(ch);
         }
-        return str;
+        return str.toString();
     }
 }
