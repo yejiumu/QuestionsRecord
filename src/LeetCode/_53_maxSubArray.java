@@ -7,15 +7,20 @@ package LeetCode;
  */
 public class _53_maxSubArray {
     /**
-     * 执行用时：1 ms, 在所有 Java 提交中击败了97.82%的用户
-     * 内存消耗：48.7 MB, 在所有 Java 提交中击败了26.38%的用户
+     * 执行用时：1 ms, 在所有 Java 提交中击败了100.00%的用户
+     * 内存消耗：50.1 MB, 在所有 Java 提交中击败了38.36%的用户
      */
     public int maxSubArray(int[] nums) {
-        int max = 0, cur = 0;
+        //pre为预处理数据，为连续和的最大值
+        int pre = 0, res = nums[0];
         for (int num : nums) {
-            cur = Math.max(cur + num, num);
-            max = Math.max(max, cur);
+            //如果pre加上num > pre，则更新pre = pre + num
+            //否则此时pre肯定为负数，将pre更新为num
+            pre = Math.max(num + pre, num);
+            //将pre和res比较，将其中大者赋值给res
+            res = Math.max(pre, res);
         }
-        return max;
+        //返回最大值
+        return res;
     }
 }

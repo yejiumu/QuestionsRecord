@@ -13,15 +13,17 @@ public class _217_containsDuplicate {
      * 执行用时：5 ms, 在所有 Java 提交中击败了85.14%的用户
      * 内存消耗：49.7 MB, 在所有 Java 提交中击败了68.37%的用户
      */
-//    public boolean containsDuplicate(int[] nums) {
-//        Set<Integer> set = new HashSet<Integer>();
-//        for (int x : nums) {
-//            if (!set.add(x)) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
+    public boolean containsDuplicate(int[] nums) {
+        //创建set(元素唯一)
+        Set<Integer> set = new HashSet<Integer>();
+        for (int x : nums) {
+            //一旦没加进去，直接返回true
+            if (!set.add(x)) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     /**
      * 执行用时：4 ms, 在所有 Java 提交中击败了69.79%的用户
