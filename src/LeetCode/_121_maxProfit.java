@@ -18,18 +18,24 @@ public class _121_maxProfit {
 //        return max;
 
     /**
-     * 动态规划
-     * <p>
-     * 执行用时：2 ms, 在所有 Java 提交中击败了91.48%的用户
-     * 内存消耗：51 MB, 在所有 Java 提交中击败了91.16%的用户
+     * 执行用时：1 ms, 在所有 Java 提交中击败了100.00%的用户
+     * 内存消耗： 57.4 MB, 在所有 Java 提交中击败了27.43%的用户
      */
     public int maxProfit(int[] prices) {
-        if (prices.length <= 1)
+        //如果只有一个或零个数值，直接返回0
+        if (prices.length <= 1) {
             return 0;
-        int min = prices[0], max = 0;
-        for (int i = 1; i < prices.length; i++) {
-            max = Math.max(max, prices[i] - min);
-            min = Math.min(min, prices[i]);
+        }
+        //min为前i项最小，max为前i项最大利润差
+        int min = prices[0], max = 0, len = prices.length;
+        for (int i = 1; i < len; i++) {
+            if (prices[i] < min) {
+                //如果出现比min更小的，直接交换
+                min = prices[i];
+            } else if (prices[i] - min > max) {
+                //如果出现更大的差额，也直接换
+                max = prices[i] - min;
+            }
         }
         return max;
     }
