@@ -35,21 +35,21 @@ public class _242_isAnagram {
      */
     public boolean isAnagram(String s, String t) {
         //创建两个计数数组，0 - 25 为 a - z
-        int[] charSNum = new int[26];
-        int[] charTNum = new int[26];
+        int[] sNum = new int[26];
+        int[] tNum = new int[26];
         //将字符串转化为数组
         char[] charS = s.toCharArray();
         char[] charT = t.toCharArray();
         //逐个遍历，统计个数
         for (char c : charS) {
-            charSNum[c - 'a']++;
+            sNum[c - 'a']++;
         }
         for (char c : charT) {
-            charTNum[c - 'a']++;
+            tNum[c - 'a']++;
         }
         for (int i = 0; i < 26; i++) {
             //如果ransomNote中的某一个字母的个数大于magazine，直接false
-            if (charSNum[i] != charTNum[i]) {
+            if (sNum[i] != tNum[i]) {
                 return false;
             }
         }
