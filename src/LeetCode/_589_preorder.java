@@ -35,6 +35,9 @@ public class _589_preorder {
     }*/
     public List<Integer> preorder(Node root) {
         List<Integer> res = new ArrayList<>();
+        while (root.children != null) {
+
+        }
         return res;
     }
 }
