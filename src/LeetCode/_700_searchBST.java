@@ -16,7 +16,7 @@ public class _700_searchBST {
             return root;
         }
         //看起来更简洁点
-        return searchBST(root.val > val ? root.right : root.left, val);
+        return searchBST(root.val < val ? root.right : root.left, val);
         //看起来易懂，但是有点冗长
 //        if (val > root.val) {
 //            return searchBST(root.right, val);
