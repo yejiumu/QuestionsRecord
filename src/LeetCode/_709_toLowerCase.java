@@ -1,7 +1,5 @@
 package LeetCode;
 
-import org.junit.Test;
-
 /**
  * 转换成小写字母
  */
