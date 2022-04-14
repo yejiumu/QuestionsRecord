@@ -26,6 +26,7 @@ public class _1672_maximumWealth {
      */
     public int maximumWealth(int[][] accounts) {
         int res = 0;
+        // 直接遍历，找出最大值，看似暴力，实则最快
         for (int[] account : accounts) {
             int sum = 0;
             for (int i = 0; i < accounts[0].length; i++) {
