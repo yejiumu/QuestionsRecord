@@ -1,6 +1,10 @@
 package LeetCode;
 
 public class _2_addTwoNumbers {
+    /**
+     * 执行用时：1 ms, 在所有 Java 提交中击败了100.00%的用户
+     * 内存消耗：41.1 MB, 在所有 Java 提交中击败了93.80%的用户
+     */
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         // 创建头尾双指针
         ListNode head = null, tail = null;
