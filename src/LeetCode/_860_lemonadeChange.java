@@ -1,5 +1,8 @@
 package LeetCode;
 
+/**
+ * 柠檬水找零
+ */
 public class _860_lemonadeChange {
     /**
      * 执行用时：1 ms, 在所有 Java 提交中击败了100.00%的用户

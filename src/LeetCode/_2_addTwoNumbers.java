@@ -1,5 +1,8 @@
 package LeetCode;
 
+/**
+ * 两数相加
+ */
 public class _2_addTwoNumbers {
     /**
      * 执行用时：1 ms, 在所有 Java 提交中击败了100.00%的用户
