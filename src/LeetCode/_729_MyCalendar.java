@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
+/**
+ * 我的日程安排表 I
+ */
 public class _729_MyCalendar {
     /**
      * 执行用时：78 ms, 在所有 Java 提交中击败了34.40%的用户

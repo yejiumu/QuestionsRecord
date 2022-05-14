@@ -2,6 +2,9 @@ package LeetCode;
 
 import java.util.Arrays;
 
+/**
+ * 多数元素
+ */
 public class _169_majorityElement {
     /**
      * 执行用时：3 ms, 在所有 Java 提交中击败了33.61%的用户
