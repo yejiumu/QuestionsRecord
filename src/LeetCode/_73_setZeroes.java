@@ -21,7 +21,7 @@ public class _73_setZeroes {
                     //如果该位置为零，将新建一个数组并保存在列表中
                     int[] arr = new int[2];
                     arr[0] = i;
-                    arr[j] = j;
+                    arr[1] = j;
                     list.add(arr);
                 }
             }
