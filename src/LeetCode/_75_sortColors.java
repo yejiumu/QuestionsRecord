@@ -11,6 +11,7 @@ public class _75_sortColors {
      * 内存消耗：39.7 MB, 在所有 Java 提交中击败了40.99%的用户
      */
     public void sortColors(int[] nums) {
+        // 标记三个数的个数，并且进行反复覆盖
         int num0 = 0, num1 = 0, num2 = 0;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == 0) {
