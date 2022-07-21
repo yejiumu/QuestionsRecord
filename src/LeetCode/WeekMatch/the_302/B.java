@@ -1,48 +1,32 @@
-//package LeetCode.WeekMatch.the_302;
-//
-//import java.util.*;
-//
-//public class B {
-//    public static void main(String[] args) {
-//        maximumSum(new int[]{18, 43, 36, 13, 7});
-//    }
-//
-//    public static int maximumSum(int[] nums) {
-//        Map<Integer, Integer> map = new HashMap<>();
-//        for (int num : nums) {
-//            map.put(num, 0);
-//        }
-//        Arrays.sort(map, new Comparator<Object>() {
-//            public int compare(Object a, Object b) {
-//                int numA = 0, numB = 0;
-//                for (char ch : a.toString().toCharArray()) {
-//                    numA += ch - '0';
-//                }
-//                for (char ch : b.toString().toCharArray()) {
-//                    numB += ch - '0';
-//                }
-//                int lenA = a.toString().length();
-//                int lenB = b.toString().length();
-//                map.put((Integer) a, lenA);
-//                map.put((Integer) b, lenB);
-//                if (numA == numB) {
-//                    return (int) a - (int) b;
-//                } else {
-//                    return numA - numB;
-//                }
-//            }
-//        });
-//        int ans = -1;
-//        int temp = 0;
-//        int index = 0;
-//        for (int num : map.keySet()) {
-//            if (map.get(num) == temp) {
-//                ans = Math.max(ans, index + map.get(num));
-//            } else {
-//                temp = map.get(num);
-//                index = num;
-//            }
-//        }
-//        return ans;
-//    }
-//}
+package LeetCode.WeekMatch.the_302;
+
+import java.util.*;
+
+public class B {
+    /**
+     * 执行用时：75 ms, 在所有 Java 提交中击败了100.00%的用户
+     * 内存消耗：57.8 MB, 在所有 Java 提交中击败了100.00%的用户
+     */
+    public int maximumSum(int[] nums) {
+        Arrays.sort(nums);
+        int ans = 0;
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int num : nums) {
+            int val = getIndexOfSum(num);
+            if (map.containsKey(val)) {
+                ans = Math.max(map.get(val) + num, ans);
+            }
+            map.put(val, num);
+        }
+        return ans;
+    }
+
+    public int getIndexOfSum(int num) {
+        int sum = 0;
+        while (num > 0) {
+            sum += num % 10;
+            num /= 10;
+        }
+        return sum;
+    }
+}
