@@ -6,7 +6,7 @@ package LeetCode.剑指offer.I;
  * @author xoke
  * @date 2022/8/20
  */
-public class _57_twoSum {
+public class _57_1_twoSum {
     /**
      * 执行用时：1 ms, 在所有 Java 提交中击败了99.90%的用户
      * 内存消耗：60.1 MB, 在所有 Java 提交中击败了45.53%的用户
