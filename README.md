@@ -29,4 +29,6 @@ blog-springboot
   ├── I    -- 剑指offer I
   ├── II    -- 剑指offer II
 后面的是LeetCode全部题目，个人的做题情况😵
+
+建议将GitHub改成GitHub1s，直接进入VSCode观看代码
 ```
