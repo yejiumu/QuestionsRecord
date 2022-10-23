@@ -1,6 +1,4 @@
-package LeetCode.CodeCarl.list;
-
-import LeetCode.ListNode;
+package LeetCode;
 
 /**
  * 设计链表
