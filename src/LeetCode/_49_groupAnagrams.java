@@ -54,4 +54,19 @@ public class _49_groupAnagrams {
         }
         return new ArrayList<>(map.values());
     }
+
+    // 真正自己做的，好像是更简便一点
+    public List<List<String>> groupAnagrams_(String[] strs) {
+        Map<String, List<String>> map = new HashMap<>();
+        for (String str : strs) {
+            char[] ch = str.toCharArray();
+            Arrays.sort(ch);
+            String s = new String(ch);
+            if (!map.containsKey(s)) {
+                map.put(s, new ArrayList<>());
+            }
+            map.get(s).add(str);
+        }
+        return new ArrayList<>(map.values());
+    }
 }
