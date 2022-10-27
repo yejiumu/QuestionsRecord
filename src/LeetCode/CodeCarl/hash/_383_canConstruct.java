@@ -1,4 +1,4 @@
-package LeetCode.CodeCarl.list;
+package LeetCode.CodeCarl.hash;
 
 /**
  * 赎金信

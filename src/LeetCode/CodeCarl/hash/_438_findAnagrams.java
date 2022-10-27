@@ -1,4 +1,4 @@
-package LeetCode.CodeCarl.list;
+package LeetCode.CodeCarl.hash;
 
 import java.util.ArrayList;
 import java.util.Arrays;
