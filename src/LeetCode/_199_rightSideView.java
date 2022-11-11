@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Queue;
 
 /**
+ * 二叉树的右视图
+ *
  * @author xoke
  * @date 2022/11/11
  */
