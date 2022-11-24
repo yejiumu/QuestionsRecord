@@ -23,4 +23,18 @@ public class _53_maxSubArray {
         //返回最大值
         return res;
     }
+    public int maxSubArray_(int[] nums) {
+        int len = nums.length;
+        int res = Integer.MIN_VALUE, sum = 0;
+        for (int i = 0;i < len; i++) {
+            sum += nums[i];
+            if (sum > res) {
+                res = sum;
+            }
+            if (sum < 0) {
+                sum = 0;
+            }
+        }
+        return res;
+    }
 }
