@@ -7,7 +7,7 @@ package LeetCode.CodeCarl.greedy;
 public class _122_maxProfit {
     /**
      * 执行用时：1 ms, 在所有 Java 提交中击败了82.36%的用户
-     * 内存消耗：41.4 MB, 在所有 Java 提交中击败了44.34%的用户
+     * 内存消耗：41.4 MB, 在所·有 Java 提交中击败了44.34%的用户
      */
     public int maxProfit(int[] prices) {
         // 贪心，直接考虑每两天的利润，不用考虑跨天的利润
