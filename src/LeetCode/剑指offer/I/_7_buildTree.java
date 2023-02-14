@@ -12,6 +12,10 @@ import java.util.Map;
  * @date 2023/2/13
  */
 public class _7_buildTree {
+    /**
+     * 执行用时：1 ms, 在所有 Java 提交中击败了99.83%的用户
+     * 内存消耗：41.2 MB, 在所有 Java 提交中击败了56.15%的用户
+     */
     Map<Integer, Integer> map;
 
     public TreeNode buildTree(int[] preorder, int[] inorder) {
