@@ -31,4 +31,20 @@ public class _22_getKthFromEnd {
         // 返回倒数第k个结点
         return list.get(len - k);
     }
+
+    public ListNode getKthFromEnd1(ListNode head, int k) {
+        // 双指针
+        ListNode right = head, left = head;
+        for (int i = 0; i < k; i++) {
+            if (right == null) {
+                return null;
+            }
+            right = right.next;
+        }
+        while (right != null) {
+            right = right.next;
+            left = left.next;
+        }
+        return left;
+    }
 }

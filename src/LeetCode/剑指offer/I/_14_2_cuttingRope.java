@@ -1,4 +1,4 @@
-package LeetCode.剑指offer;
+package LeetCode.剑指offer.I;
 
 /**
  * 剪绳子 II

@@ -2,6 +2,9 @@ package LeetCode.剑指offer.I;
 
 import LeetCode.TreeNode;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 /**
  * 二叉树的镜像
  *
@@ -26,6 +29,28 @@ public class _27_mirrorTree {
         root.left = right;
         //将翻转好的左结点赋给右结点
         root.right = left;
+        return root;
+    }
+
+    public TreeNode mirrorTree1(TreeNode root) {
+        // 栈
+        if (root == null) {
+            return null;
+        }
+        Deque<TreeNode> deque = new ArrayDeque<>();
+        deque.add(root);
+        while (!deque.isEmpty()) {
+            TreeNode node = deque.pop();
+            if (node.left != null) {
+                deque.add(node.left);
+            }
+            if (node.right != null) {
+                deque.add(node.right);
+            }
+            TreeNode tmp = node.left;
+            node.left = node.right;
+            node.right = tmp;
+        }
         return root;
     }
 }

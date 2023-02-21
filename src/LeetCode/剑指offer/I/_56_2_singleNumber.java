@@ -1,5 +1,8 @@
 package LeetCode.剑指offer.I;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 数组中数字出现的次数 II
  *
@@ -35,5 +38,19 @@ public class _56_2_singleNumber {
             }
         }
         return ans;
+    }
+
+    public int singleNumber1(int[] nums) {
+        // hashmap统计次数
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int num : nums) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+        for (int num : map.keySet()) {
+            if (map.get(num) == 1) {
+                return num;
+            }
+        }
+        return 0;
     }
 }
